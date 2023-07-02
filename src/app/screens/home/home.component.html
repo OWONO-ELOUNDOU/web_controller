@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+<main class="content">
+    <section class="users">
+        <div class="row">
+            <div class="section-title">
+                <h2 class="title">Informations Utilisateurs</h2>
+            </div>
+            <div class="section-body">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>nom</th>
+                            <th>prénom</th>
+                            <th>email</th>
+                            <th>téléphone</th>
+                            <th>ville</th>
+                            <th>pays</th>
+                            <th>option</th>
+                        </tr>
+                    </thead>
+                    <tbody *ngIf="userList && userList.length > 0">
+                        <tr *ngFor="let user of userList">
+                            <td>{{ user.fname }}</td>
+                            <td>{{ user.lname }}</td>
+                            <td>{{ user.email }}</td>
+                            <td>{{ user.phone }}</td>
+                            <td>{{ user.town }}</td>
+                            <td>{{ user.country }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</main>
+<p>Home works</p>

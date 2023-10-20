@@ -1,0 +1,17 @@
+<div class="sidebar" [ngClass]="collapsed ? 'sidebar-collapsed' : ''">
+    <div class="logo-container">
+        <button class="logo">W</button>
+        <div class="logo-text" *ngIf="collapsed">Windows237</div>
+        <button class="btn-close" *ngIf="collapsed">
+            <i class='bx bxs-chevron-left close-icon'></i>
+        </button>
+    </div>
+    <ul class="sidebar-nav">
+        <li class="sidebar-nav-item" *ngFor="let data of navData">
+            <a class="sidebar-nav-link" [routerLink]="[data.routeLink]">
+                <i class="sidebar-link-icon" [class]="data.icon"></i>
+                <span class="sidebar-nav-text" *ngIf="collapsed">{{ data.title }}</span>
+            </a>
+        </li>
+    </ul>
+</div>
